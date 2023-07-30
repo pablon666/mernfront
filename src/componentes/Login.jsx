@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 
 const Login = () =>{
 
-    const URL = process.env.REACT_APP_URL1;
+    const URL = 'https://app-mern-ed5881b777eb.herokuapp.com/login';
 
     const {register, handleSubmit, reset, formState: { errors } } =  useForm({
         defaultValues: {

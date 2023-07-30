@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 
 const Formulario = () =>{
 
-    const URL = process.env.REACT_APP_URL;
+    const URL ='https://app-mern-ed5881b777eb.herokuapp.com/body';
 
     const {register, handleSubmit, reset, formState: { errors } } =  useForm({
         defaultValues: {
