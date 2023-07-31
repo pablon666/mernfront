@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Productos = () =>{
 
-    const DATOS = 'https://app-mern-ed5881b777eb.herokuapp.com/clientes'
+    const DATOS = process.env.REACT_APP_DATOS;
 
     console.log(DATOS);
 

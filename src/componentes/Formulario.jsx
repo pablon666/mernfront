@@ -9,11 +9,12 @@ import Swal from 'sweetalert2';
 
 const Formulario = () =>{
 
-    const URL ='https://app-mern-ed5881b777eb.herokuapp.com/body';
+    const URL = process.env.REACT_APP_URL;
 
     const {register, handleSubmit, reset, formState: { errors } } =  useForm({
         defaultValues: {
             nombre: '',
+            apellido: '',
             email: '',
             password: ''
         }
@@ -69,6 +70,20 @@ const Formulario = () =>{
                 </Form.Field>
                 {errors.nombre && <p className='errores'>El nombre es obligatorio con un maximo de 50 caracteres</p>}
 
+                <Form.Field>
+                    <Label>Apellido</Label>
+                    <input placeholder='Apellido'
+                    type='text'
+                    name='apellido'
+                    {...register('apellido',
+                        {
+                            required: true,
+                            maxLength: 50
+                        })
+                    }
+                    />
+                </Form.Field>
+                {errors.apellido && <p className='errores'>El Apellido es obligatorio con un maximo de 50 caracteres</p>}
 
                 <Form.Field>
                 <Label>Email</Label>
