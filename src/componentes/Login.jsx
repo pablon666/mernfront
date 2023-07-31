@@ -69,12 +69,8 @@ const Login = () =>{
                     <input placeholder='Password de 6 a 10 caracteres'
                     type='password'
                     name='password'
-                    {...register('password', 
-                    {
-                        required: true,
-                        pattern: ///^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/
-                    })
-                }
+                    
+                
                     />
                 </Form.Field>
                 {errors.password && <p className='errores'>El Password  debe incluir minuscula, mayuscula y entre 6 a 10 caracteres</p>}
