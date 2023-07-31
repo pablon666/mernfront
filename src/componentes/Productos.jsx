@@ -19,7 +19,7 @@ const Productos = () =>{
             setApiData(res.data.personas)
         })
     
-    }, [])
+    }, [DATOS])
 
     const getData = () =>{
         axios.get(DATOS)
